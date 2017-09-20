@@ -1,0 +1,15 @@
+{
+  "name": "geese",
+  "version": "1.0.0",
+  "description": "sandboxing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "geese",
+  "license": "ISC",
+  "devDependencies": {
+    "es6-promise": "^4.1.1",
+    "gulp": "^3.9.1"
+  }
+}
