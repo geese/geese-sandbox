@@ -18,6 +18,11 @@
  * @package WordPress
  */
 
+//source: https://wpcolt.com/jquery-not-defined-possible-causes-fix-wordpress/
+
+//define('CONCATENATE_SCRIPTS', false);
+
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'wordpress');

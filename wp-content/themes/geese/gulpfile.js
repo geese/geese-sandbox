@@ -39,11 +39,11 @@ gulp.task('watch', function(){
 gulp.task('js', function() {
   return gulp.src(['./js/*.js'])
     .pipe(jshint())
-    // .pipe(jshint.reporter('default'))
-    // .pipe(concat('app.js'))
-    // .pipe(rename({suffix: '.min'}))
-    // .pipe(uglify())
-    // .pipe(gulp.dest('./js'))
+    .pipe(jshint.reporter('default'))
+    //.pipe(concat('app.js'))
+    // .pipe(rename({suffix: '.min'})) //no prob
+    // .pipe(uglify())//no prob
+    // .pipe(gulp.dest('./js'))//no prob
 });
 
 // default task
