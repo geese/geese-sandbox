@@ -11,18 +11,32 @@
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<script type="text/javascript" src="/js/custom_script.js"></script> <!-- maybe this isn't the place to link? -->
 	<?php endif; ?>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+	<div id="test-script">
+    
+<!-- just playing around... -->
+<!--
+    <?php //get_search_form();?> 
+    
+    Blog Name: <?php //bloginfo('name');?> <br>
+    WordPress version <?php //bloginfo('version');?>
+     
+-->
+    
+	</div>
 	<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
