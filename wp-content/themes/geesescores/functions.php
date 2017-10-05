@@ -72,7 +72,7 @@ add_action( 'after_setup_theme', 'geesescores_setup' );
 /**
  * Register custom fonts.
  */
-function geese_fonts_url() {
+function geesescores_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -105,6 +105,29 @@ function geese_fonts_url() {
 
 	return esc_url_raw( $fonts_url );
 }
+
+
+
+/**
+ * Add preconnect for Google Fonts.
+ *
+ * @since Twenty Seventeen 1.0
+ *
+ * @param array  $urls           URLs to print for resource hints.
+ * @param string $relation_type  The relation type the URLs are printed.
+ * @return array $urls           URLs to print for resource hints.
+ */
+function geesescores_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'geesescores-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'geesescores_resource_hints', 10, 2 );
 
 
 
@@ -145,7 +168,7 @@ add_action( 'widgets_init', 'geesescores_widgets_init' );
  */
 function geesescores_scripts() {
         // Enqueue Google Fonts: Source Sans Pro and PT Serif
-        wp_enqueue_style('geesescores-fonts', geese_fonts_url());
+        wp_enqueue_style('geesescores-fonts', geesescores_fonts_url());
     
 	wp_enqueue_style( 'geesescores-style', get_stylesheet_uri() );
 
