@@ -44,7 +44,8 @@ function geesescores_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'geesescores' ),
+		'primary' => esc_html__( 'Header', 'geesescores' ),
+		//'secondary' => esc_html__( 'Secondary', 'geesescores' ),
 	) );
 
 	/*
