@@ -980,6 +980,70 @@ button.dropdown-toggle {
 }
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/*
+Header Menu
+*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 6, 2017, 1:31:59 PM
+    Author     : giselachodos
+*/
+/*
+Copied from .site-header in header.scss
+*/
+.site-footer {
+	position: relative;
+	padding: 1em;
+	font-family: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+	color: #fff;
+	background-color: #002254;
+	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	.site-footer {
+		padding: 1em 2em;
+	}
+}
+
+nav.social-menu ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav.social-menu li {
+	/*        display: inline-block;
+        margin-right: 1em;*/
+}
+
+nav.social-menu li a {
+	display: block;
+	padding: .5em 1em;
+	text-decoration: none;
+	color: #fff;
+	font-size: .9em;
+}
+
+nav.social-menu li a:hover, nav.social-menu li a:focus, nav.social-menu li a:active {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {

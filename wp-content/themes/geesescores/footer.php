@@ -14,6 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+                <nav class="social-menu">
+                <?php wp_nav_menu( array( 'theme_location' => 'social') ); ?>
+                </nav>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'geesescores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'geesescores' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
