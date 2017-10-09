@@ -133,3 +133,19 @@ function geesescores_category_transient_flusher() {
 }
 add_action( 'edit_category', 'geesescores_category_transient_flusher' );
 add_action( 'save_post',     'geesescores_category_transient_flusher' );
+
+
+
+/**
+ * Post navigation (previous / next post) for single posts.
+ */
+function geesescores_post_navigation() {
+	the_post_navigation( array(
+		'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'geesescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Next post:', 'geesescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+		'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'geesescores' ) . '</span> ' .
+			'<span class="screen-reader-text">' . __( 'Previous post:', 'geesescores' ) . '</span> ' .
+			'<span class="post-title">%title</span>',
+	) );
+}
