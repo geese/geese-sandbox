@@ -188,6 +188,8 @@ function geesescores_scripts() {
 		'collapse' => __( 'Collapse child menu', 'geesescores'),
 	));
 
+        wp_enqueue_script( 'geesescores-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20151009', true );
+
 	wp_enqueue_script( 'geesescores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
