@@ -44,13 +44,9 @@ if ( ! function_exists( 'geesescores_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function geesescores_entry_footer() {
-	// Hide category and tag text for pages.
+	// Hide tag text for pages.
 	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'geesescores' ) );
-		if ( $categories_list && geesescores_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'geesescores' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+		
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'geesescores' ) );
@@ -77,6 +73,20 @@ function geesescores_entry_footer() {
 	);
 }
 endif;
+
+
+/**
+ * Display category list
+ */
+function geesescores_the_category_list(){
+    /* translators: used between list items, there is a space after the comma */
+    $categories_list = get_the_category_list(esc_html__(', ', 'geesescores'));
+    if ($categories_list && geesescores_categorized_blog()) {
+        printf('<span class="cat-links">' . esc_html__('%1$s', 'geesescores') . '</span>', $categories_list); // WPCS: XSS OK.
+    }
+}
+
+
 
 /**
  * Returns true if a blog has more than 1 category.
