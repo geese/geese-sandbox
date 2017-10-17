@@ -1,0 +1,50 @@
+header {
+    
+    .site-title-wrapper,
+    .site-description-wrapper { display: flex; }
+   
+    .header-left, .header-right { 
+        position: relative; overflow-x: hidden; 
+    }
+   
+    h1, p { 
+        
+        display: inline-block;
+        width: 100vw;
+        padding: 0 2vw 0 3vw;
+        margin: 0;
+        
+        a { text-decoration: none; }
+     }
+     
+    h1 { font-size: 6em; font-family: Anton;}
+    p { font-size: 2em; font-family: Cabin;}
+     
+     .header-left {
+        background: $color__header-background-left; 
+        flex: 1 0 70vw;
+        
+        h1, p {
+            color: $color__header-color-left;
+            
+            a { color: $color__header-color-left;}
+        }
+     }
+     
+     .header-right{
+        background: $color__header-background-right;
+        flex: 1 0 auto;
+        
+        h1, p {
+            color: $color__header-color-right;
+            position: relative;
+            left: -70vw;
+            
+            a { color: $color__header-color-right ;}
+        }
+     }
+    
+}
+
+
+

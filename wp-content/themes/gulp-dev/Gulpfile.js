@@ -1,4 +1,4 @@
-var themename = 'geesescores';  //change this to run it with a different theme
+var themename = 'lustig-1942';  //change this to run it with a different theme
 
 var gulp = require('gulp'),
 	// Prepare and optimize code etc
