@@ -4,11 +4,15 @@ header {
     .site-description-wrapper { display: flex; }
    
     .header-left, .header-right { 
-        position: relative; overflow-x: hidden; 
+        overflow-x: hidden; 
     }
-   
-    h1, p { 
-        
+    
+    
+    
+    h1 { font-size: 6em; font-family: Anton;}
+    p { font-size: 2em; font-family: Cabin;}
+    
+    h1.site-title, p.site-title {         
         display: inline-block;
         width: 100vw;
         padding: 0 2vw 0 3vw;
@@ -17,14 +21,18 @@ header {
         a { text-decoration: none; }
      }
      
-    h1 { font-size: 6em; font-family: Anton;}
-    p { font-size: 2em; font-family: Cabin;}
+     p.site-description {
+         padding-left: 3.5vw;
+         background: $color__header-background-right;
+         color: $color__header-color-right;
+         margin: 4px 0 20px 0;
+     }
      
      .header-left {
         background: $color__header-background-left; 
         flex: 1 0 70vw;
         
-        h1, p {
+        h1.site-title, p.site-title {
             color: $color__header-color-left;
             
             a { color: $color__header-color-left;}
@@ -33,15 +41,16 @@ header {
      
      .header-right{
         background: $color__header-background-right;
-        flex: 1 0 auto;
+        flex: 1 0 30vw;
         
-        h1, p {
+        h1.site-title, p.site-title {
             color: $color__header-color-right;
             position: relative;
             left: -70vw;
             
             a { color: $color__header-color-right ;}
         }
+        
      }
     
 }

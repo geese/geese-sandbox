@@ -57,7 +57,7 @@
 				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
                             </div><!-- .header-left -->
                             <div class="header-right">
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+<!--				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>-->
                             </div><!-- .header-right -->
                         </div><!-- .site-description-wrapper -->
 			<?php

@@ -723,19 +723,7 @@ header .site-description-wrapper {
 }
 
 header .header-left, header .header-right {
-	position: relative;
 	overflow-x: hidden;
-}
-
-header h1, header p {
-	display: inline-block;
-	width: 100vw;
-	padding: 0 2vw 0 3vw;
-	margin: 0;
-}
-
-header h1 a, header p a {
-	text-decoration: none;
 }
 
 header h1 {
@@ -748,6 +736,24 @@ header p {
 	font-family: Cabin;
 }
 
+header h1.site-title, header p.site-title {
+	display: inline-block;
+	width: 100vw;
+	padding: 0 2vw 0 3vw;
+	margin: 0;
+}
+
+header h1.site-title a, header p.site-title a {
+	text-decoration: none;
+}
+
+header p.site-description {
+	padding-left: 3.5vw;
+	background: #d6c2aa;
+	color: #394671;
+	margin: 4px 0 20px 0;
+}
+
 header .header-left {
 	background: #c23824;
 	-webkit-box-flex: 1;
@@ -755,28 +761,28 @@ header .header-left {
 	        flex: 1 0 70vw;
 }
 
-header .header-left h1, header .header-left p {
+header .header-left h1.site-title, header .header-left p.site-title {
 	color: #d6c2aa;
 }
 
-header .header-left h1 a, header .header-left p a {
+header .header-left h1.site-title a, header .header-left p.site-title a {
 	color: #d6c2aa;
 }
 
 header .header-right {
 	background: #d6c2aa;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 auto;
-	        flex: 1 0 auto;
+	    -ms-flex: 1 0 30vw;
+	        flex: 1 0 30vw;
 }
 
-header .header-right h1, header .header-right p {
+header .header-right h1.site-title, header .header-right p.site-title {
 	color: #394671;
 	position: relative;
 	left: -70vw;
 }
 
-header .header-right h1 a, header .header-right p a {
+header .header-right h1.site-title a, header .header-right p.site-title a {
 	color: #394671;
 }
 
