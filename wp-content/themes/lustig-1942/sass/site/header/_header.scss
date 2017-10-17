@@ -23,32 +23,32 @@ header {
      
      p.site-description {
          padding-left: 3.5vw;
-         background: $color__header-background-right;
-         color: $color__header-color-right;
+         background: $color__header-background-secondary;
+         color: $color__header-color-secondary;
          margin: 4px 0 20px 0;
      }
      
      .header-left {
-        background: $color__header-background-left; 
+        background: $color__header-background-primary; 
         flex: 1 0 70vw;
         
         h1.site-title, p.site-title {
-            color: $color__header-color-left;
+            color: $color__header-color-primary;
             
-            a { color: $color__header-color-left;}
+            a { color: $color__header-color-primary;}
         }
      }
      
      .header-right{
-        background: $color__header-background-right;
+        background: $color__header-background-secondary;
         flex: 1 0 30vw;
         
         h1.site-title, p.site-title {
-            color: $color__header-color-right;
+            color: $color__header-color-secondary;
             position: relative;
             left: -70vw;
             
-            a { color: $color__header-color-right ;}
+            a { color: $color__header-color-secondary ;}
         }
         
      }
