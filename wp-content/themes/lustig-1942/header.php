@@ -22,6 +22,13 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+    
+    <div id="content--background--outer-wrapper">  
+        <div id="content--background--inner-wrapper">
+            <div class="content--background-primary"></div>
+            <div class="content--background-secondary"><div></div></div>
+        </div>
+    
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lustig-1942' ); ?></a>
 
 	<header id="masthead" class="site-header">
@@ -76,4 +83,11 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	
+
+        
+        
+           <div id="content" class="site-content">
+            
+            
+            

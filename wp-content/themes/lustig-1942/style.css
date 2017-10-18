@@ -505,59 +505,79 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+/*.main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
 }
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
+ Small menu. 
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
@@ -572,28 +592,26 @@ a:hover, a:active {
 	}
 }
 
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
+.comment-navigation,
+.posts-navigation,
 .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
 
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}*/
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -717,17 +735,16 @@ header .header-left, header .header-right {
 	overflow-x: hidden;
 }
 
-header h1 {
-	font-size: 6em;
-	font-family: Anton;
+header h1.site-title {
+	font-size: 5em;
 }
 
-header p {
-	font-size: 2em;
-	font-family: Cabin;
+header p.site-title {
+	font-size: 2.2em;
 }
 
 header h1.site-title, header p.site-title {
+	font-family: Anton;
 	display: inline-block;
 	width: 100vw;
 	padding: 0 2vw 0 3vw;
@@ -735,14 +752,18 @@ header h1.site-title, header p.site-title {
 }
 
 header h1.site-title a, header p.site-title a {
+	letter-spacing: 2px;
 	text-decoration: none;
+	text-transform: lowercase;
 }
 
 header p.site-description {
-	padding-left: 3.5vw;
-	background: #d6c2aa;
+	font-family: Cabin;
+	font-size: 1.8em;
+	padding-left: 3vw;
+	background: #ece7e1;
 	color: #394671;
-	margin: 4px 0 20px 0;
+	margin: 0 0 3% 0;
 }
 
 header .header-left {
@@ -753,15 +774,15 @@ header .header-left {
 }
 
 header .header-left h1.site-title, header .header-left p.site-title {
-	color: #d6c2aa;
+	color: #ece7e1;
 }
 
 header .header-left h1.site-title a, header .header-left p.site-title a {
-	color: #d6c2aa;
+	color: #ece7e1;
 }
 
 header .header-right {
-	background: #d6c2aa;
+	background: #ece7e1;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1 0 30vw;
 	        flex: 1 0 30vw;
@@ -775,6 +796,163 @@ header .header-right h1.site-title, header .header-right p.site-title {
 
 header .header-right h1.site-title a, header .header-right p.site-title a {
 	color: #394671;
+}
+
+.main-navigation {
+	background: black;
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation a {
+	color: #ece7e1;
+	font-family: Cabin;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 100%;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+	padding: 4px 3vw;
+	text-transform: lowercase;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+## Site Content (#content .site-content div)
+--------------------------------------------------------------*/
+div.site-content {
+	width: 90%;
+	margin: 3% auto;
+	padding: 0 3%;
+	background: white;
+}
+
+/*--------------------------------------------------------------
+## Background Wrapper (fills .site-content)
+--------------------------------------------------------------*/
+#content--background--outer-wrapper {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	padding-top: 5%;
+}
+
+#content--background--outer-wrapper #content--background--inner-wrapper {
+	position: absolute;
+	top: -10%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	height: 110%;
+}
+
+#content--background--outer-wrapper #content--background--inner-wrapper .content--background-primary {
+	z-index: -10;
+	background: #c23824;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 70vw;
+	        flex: 1 0 70vw;
+}
+
+#content--background--outer-wrapper #content--background--inner-wrapper .content--background-secondary {
+	z-index: -10;
+	background: #ece7e1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 0 100vw;
+	        flex: 1 0 100vw;
+	overflow-x: visible;
+}
+
+#content--background--outer-wrapper #content--background--inner-wrapper .content--background-secondary div {
+	height: 100%;
+	width: 115%;
+	position: relative;
+	left: -15vw;
+	/* background: lightgray; */
+	background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
+	background-size: auto 8px;
 }
 
 /*--------------------------------------------------------------
@@ -814,6 +992,18 @@ header .header-right h1.site-title a, header .header-right p.site-title a {
 	display: block;
 }
 
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 18, 2017, 1:35:42 PM
+    Author     : giselachodos
+*/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

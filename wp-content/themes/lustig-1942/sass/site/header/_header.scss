@@ -9,23 +9,30 @@ header {
     
     
     
-    h1 { font-size: 6em; font-family: Anton;}
-    p { font-size: 2em; font-family: Cabin;}
+    h1.site-title { font-size: 5em; }
+    p.site-title { font-size: 2.2em; }
     
-    h1.site-title, p.site-title {         
+    h1.site-title, p.site-title {  
+        font-family: Anton;
         display: inline-block;
         width: 100vw;
         padding: 0 2vw 0 3vw;
         margin: 0;
         
-        a { text-decoration: none; }
+        a { 
+            letter-spacing: 2px;
+            text-decoration: none;         
+            text-transform: lowercase;
+        }
      }
      
      p.site-description {
-         padding-left: 3.5vw;
+         font-family: Cabin;
+         font-size: 1.8em;
+         padding-left: 3vw;
          background: $color__header-background-secondary;
          color: $color__header-color-secondary;
-         margin: 4px 0 20px 0;
+         margin: 0 0 3% 0;
      }
      
      .header-left {
@@ -57,3 +64,6 @@ header {
 
 
 
+// Header Menu
+// -----------------------------------------------------------------------------
+@import "header-menu";
