@@ -33,6 +33,11 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+                    <div id="wrapper__header-top">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     
 			<?php
 			//the_custom_logo();

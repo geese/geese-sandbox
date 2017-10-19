@@ -1,3 +1,50 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
+
+    .entry-header {
+        
+        background: $color__background-secondary;
+        &:after {
+            clear: left;
+            display: block;
+            content: '';
+        }
+        
+        div.entry-header--decoration {
+            display: inline-block;
+            margin-right: .5rem;
+            width: 4rem;
+            height: 8rem;
+            float: left;
+            background-image:   url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
+            background-size: auto .5rem;
+            background-position: .5rem;
+        }
+        
+        h1, h2 {
+        clear: none;
+        background: $color__background-secondary;
+        
+        margin: 0;
+        padding: 1rem 0;
+
+        font-family: Anton;
+        font-size: 2rem;
+        color: $color__background-primary;
+        color: $color__color-secondary;
+
+        a {
+            color: $color__background-primary;
+            color: $color__color-secondary;
+            text-decoration: none;
+
+            &:visited {
+                color: $color__background-primary;
+                color: $color__color-secondary;
+            }
+        }
+    }
+}
+
+

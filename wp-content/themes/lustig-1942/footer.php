@@ -15,7 +15,9 @@
 	
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+            <div class="footer--background-wrapper">
+                <div class="site-info">
+                    <div>
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lustig-1942' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'lustig-1942' ), 'WordPress' );
@@ -25,7 +27,12 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'lustig-1942' ), 'lustig-1942', '<a href="http://underscores.me/">Gisela Chodos</a>' );
 			?>
+                    </div>
 		</div><!-- .site-info -->
+                <div></div>
+                <div></div>
+		
+            </div>
 	</footer><!-- #colophon -->
         
         </div> <!-- #content--background-wrapper -->
