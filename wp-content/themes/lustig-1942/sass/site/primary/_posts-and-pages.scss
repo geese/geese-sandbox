@@ -2,8 +2,82 @@
 	display: block;
 }
 
+    .entry-header {
+        
+        background: $color__background-secondary;
+        &:after {
+            clear: left;
+            display: block;
+            content: '';
+        }
+        
+        div.entry-header--decoration {
+            display: inline-block;
+            margin-right: 1rem;
+            width: 4rem;
+            height: 8rem;
+            float: left;
+            @include background-lines();
+            background-size: auto .5rem;
+            background-position-y: center;
+        }
+        
+        h1, h2 {
+        clear: none;
+        background: $color__background-secondary;
+        
+        margin: 0;
+        padding: 1rem 0;
+
+        font-family: Anton;
+        font-size: 2rem;
+        color: $color__background-primary;
+        color: $color__color-secondary;
+
+        a {
+            color: $color__background-primary;
+            color: $color__color-secondary;
+            text-decoration: none;
+
+            &:visited {
+                color: $color__background-primary;
+                color: $color__color-secondary;
+            }
+        }
+    }
+    
+    .entry-meta {
+        font-family: Cabin;
+        a {
+            color: $color__background-primary;
+            font-weight: bold;
+            text-decoration: none;
+            
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------------
+the <article> element has the class 'hentry'
+------------------------------------------------------------*/
 .hentry {
 	margin: 0 0 1.5em;
+}
+
+.hentry, 
+.content-area--single
+/*.site-main */{
+    background: $color__background-secondary;
 }
 
 .updated:not(.published) {
@@ -15,6 +89,8 @@
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+
+
 
 .page-links {
 	clear: both;

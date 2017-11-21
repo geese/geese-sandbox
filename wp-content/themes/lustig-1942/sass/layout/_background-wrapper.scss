@@ -1,0 +1,45 @@
+#content--background--outer-wrapper {
+    position: relative;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+/*    padding-top: 5%;*/
+    
+    #content--background--inner-wrapper {
+        position: absolute;
+        z-index: -100;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+
+        .content--background-primary {
+            z-index: -10;
+            background: $color__background-primary;
+            flex: 1 0 $width__background-primary;
+        }
+    
+        .content--background-secondary {
+            z-index: -10;
+            background: $color__background-secondary;
+            flex: 1 0 $width__background-secondary;
+            overflow-x: visible;
+            
+            div {
+                height: 100%;
+                width: calc(#{$width__background-overlap} + #{$width__background-secondary});
+                position: relative;
+                left: -$width__background-overlap;
+                @include background-lines();
+                background-size: auto .5rem;
+
+              }
+        }
+        
+    }
+    
+    
+    
+    
+    
+}
+

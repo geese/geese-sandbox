@@ -10,6 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
+            <div class="content-area--single">
 		<main id="main" class="site-main">
 
 		<?php
@@ -28,6 +29,7 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
+            </div><!-- .content-area--single -->
 	</div><!-- #primary -->
 
 <?php

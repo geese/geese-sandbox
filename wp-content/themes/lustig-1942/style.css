@@ -275,49 +275,6 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-.entry-header {
-	background: #ece7e1;
-}
-
-.entry-header:after {
-	clear: left;
-	display: block;
-	content: '';
-}
-
-.entry-header div.entry-header--decoration {
-	display: inline-block;
-	margin-right: .5rem;
-	width: 4rem;
-	height: 8rem;
-	float: left;
-	background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
-	background-size: auto .5rem;
-	background-position: .5rem;
-}
-
-.entry-header h1, .entry-header h2 {
-	clear: none;
-	background: #ece7e1;
-	margin: 0;
-	padding: 1rem 0;
-	font-family: Anton;
-	font-size: 2rem;
-	color: #c23824;
-	color: #394671;
-}
-
-.entry-header h1 a, .entry-header h2 a {
-	color: #c23824;
-	color: #394671;
-	text-decoration: none;
-}
-
-.entry-header h1 a:visited, .entry-header h2 a:visited {
-	color: #c23824;
-	color: #394671;
-}
-
 p {
 	margin-bottom: 1.5em;
 }
@@ -785,8 +742,8 @@ header #wrapper__header-top {
 header #wrapper__header-top div:first-of-type {
 	background: #c23824;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 55vw;
-	        flex: 1 0 55vw;
+	    -ms-flex: 1 0 calc(68vw - 15vw);
+	        flex: 1 0 calc(68vw - 15vw);
 }
 
 header #wrapper__header-top div:nth-of-type(2) {
@@ -798,8 +755,8 @@ header #wrapper__header-top div:nth-of-type(2) {
 
 header #wrapper__header-top div:nth-of-type(3) {
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 30vw;
-	        flex: 1 0 30vw;
+	    -ms-flex: 1 0 32vw;
+	        flex: 1 0 32vw;
 	background: #394671;
 }
 
@@ -849,8 +806,8 @@ header p.site-description {
 header .header-left {
 	background: #c23824;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 70vw;
-	        flex: 1 0 70vw;
+	    -ms-flex: 1 0 68vw;
+	        flex: 1 0 68vw;
 }
 
 header .header-left h1.site-title, header .header-left p.site-title {
@@ -864,14 +821,14 @@ header .header-left h1.site-title a, header .header-left p.site-title a {
 header .header-right {
 	background: #ece7e1;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 30vw;
-	        flex: 1 0 30vw;
+	    -ms-flex: 1 0 32vw;
+	        flex: 1 0 32vw;
 }
 
 header .header-right h1.site-title, header .header-right p.site-title {
 	color: #394671;
 	position: relative;
-	left: -70vw;
+	left: -68vw;
 }
 
 header .header-right h1.site-title a, header .header-right p.site-title a {
@@ -977,10 +934,12 @@ header .header-right h1.site-title a, header .header-right p.site-title a {
 /*--------------------------------------------------------------
 ## Site Content (#content .site-content div)
 --------------------------------------------------------------*/
-div.site-content {
+/*--------------------------------------------------------------
+# No background (color) defined, so that space can show between posts.
+--------------------------------------------------------------*/
+div#content {
 	width: 90%;
 	margin: 3% auto;
-	background: white;
 }
 
 /*--------------------------------------------------------------
@@ -1004,8 +963,6 @@ div.site-content {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: row;
 	        flex-direction: row;
-	/*        top: -10%;*/
-	/*        height: 110%;*/
 	height: 100%;
 }
 
@@ -1013,25 +970,24 @@ div.site-content {
 	z-index: -10;
 	background: #c23824;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 70vw;
-	        flex: 1 0 70vw;
+	    -ms-flex: 1 0 68vw;
+	        flex: 1 0 68vw;
 }
 
 #content--background--outer-wrapper #content--background--inner-wrapper .content--background-secondary {
 	z-index: -10;
 	background: #ece7e1;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 30vw;
-	        flex: 1 0 30vw;
+	    -ms-flex: 1 0 32vw;
+	        flex: 1 0 32vw;
 	overflow-x: visible;
 }
 
 #content--background--outer-wrapper #content--background--inner-wrapper .content--background-secondary div {
 	height: 100%;
-	width: 45vw;
+	width: calc(15vw + 32vw);
 	position: relative;
 	left: -15vw;
-	/* background: lightgray; */
 	background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
 	background-size: auto .5rem;
 }
@@ -1043,8 +999,73 @@ div.site-content {
 	display: block;
 }
 
+.entry-header {
+	background: #ece7e1;
+}
+
+.entry-header:after {
+	clear: left;
+	display: block;
+	content: '';
+}
+
+.entry-header div.entry-header--decoration {
+	display: inline-block;
+	margin-right: 1rem;
+	width: 4rem;
+	height: 8rem;
+	float: left;
+	background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
+	background-size: auto .5rem;
+	background-position-y: center;
+}
+
+.entry-header h1, .entry-header h2 {
+	clear: none;
+	background: #ece7e1;
+	margin: 0;
+	padding: 1rem 0;
+	font-family: Anton;
+	font-size: 2rem;
+	color: #c23824;
+	color: #394671;
+}
+
+.entry-header h1 a, .entry-header h2 a {
+	color: #c23824;
+	color: #394671;
+	text-decoration: none;
+}
+
+.entry-header h1 a:visited, .entry-header h2 a:visited {
+	color: #c23824;
+	color: #394671;
+}
+
+.entry-header .entry-meta {
+	font-family: Cabin;
+}
+
+.entry-header .entry-meta a {
+	color: #c23824;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.entry-header .entry-meta a:hover, .entry-header .entry-meta a:focus {
+	text-decoration: underline;
+}
+
+/*-----------------------------------------------------------
+the <article> element has the class 'hentry'
+------------------------------------------------------------*/
 .hentry {
 	margin: 0 0 1.5em;
+}
+
+.hentry,
+.content-area--single {
+	background: #ece7e1;
 }
 
 .updated:not(.published) {
@@ -1060,6 +1081,39 @@ div.site-content {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Entry footers
+--------------------------------------------------------------*/
+.entry-footer {
+	display: inline-block;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.cat-icon {
+	display: inline-block;
+}
+
+span.cat-links {
+	/*    display: inline-block;
+    padding-left: 1.2rem;
+    background-image: url("images/categories-2.svg");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 0;
+    background-position-y: center;*/
+}
+
+span.tags-links {
+	display: inline-block;
+	padding-left: 1.2rem;
+	background-image: url("images/tags-10.svg");
+	background-repeat: no-repeat;
+	background-size: 1rem;
+	background-position-x: 0;
+	background-position-y: center;
 }
 
 /*--------------------------------------------------------------
@@ -1090,8 +1144,8 @@ div.site-content {
 .footer--background-wrapper div:first-of-type {
 	background: #c23824;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 55vw;
-	        flex: 1 0 55vw;
+	    -ms-flex: 1 0 calc(68vw - 15vw);
+	        flex: 1 0 calc(68vw - 15vw);
 }
 
 .footer--background-wrapper div:first-of-type div {
@@ -1122,8 +1176,8 @@ div.site-content {
 .footer--background-wrapper div:nth-of-type(3) {
 	height: 30vh;
 	-webkit-box-flex: 1;
-	    -ms-flex: 1 0 30vw;
-	        flex: 1 0 30vw;
+	    -ms-flex: 1 0 32vw;
+	        flex: 1 0 32vw;
 	background: #394671;
 	color: #ece7e1;
 }

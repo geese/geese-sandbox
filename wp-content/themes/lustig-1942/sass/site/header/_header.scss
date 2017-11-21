@@ -7,16 +7,16 @@ header {
         
         div:first-of-type {
             background: $color__background-primary;
-            flex: 1 0 55vw;
+            flex: 1 0 calc(#{$width__background-primary} - #{$width__background-overlap});
         }
         
         div:nth-of-type(2) {
             background: #000000;
-            flex: 1 0 15vw;
+            flex: 1 0 $width__background-overlap;
         }
     
         div:nth-of-type(3){
-            flex: 1 0 30vw;
+            flex: 1 0 $width__background-secondary;
             background: $color__color-secondary;
         }
         
@@ -52,33 +52,33 @@ header {
          font-family: Cabin;
          font-size: 1.8em;
          padding-left: 3vw;
-         background: $color__header-background-secondary;
-         color: $color__header-color-secondary;
+         background: $color__background-secondary;
+         color: $color__color-secondary;
          margin: 0 0 2% 0;
          padding-left: 5vw;
      }
      
      .header-left {
-        background: $color__header-background-primary; 
-        flex: 1 0 70vw;
+        background: $color__background-primary; 
+        flex: 1 0 $width__background-primary;
         
         h1.site-title, p.site-title {
-            color: $color__header-color-primary;
+            color: $color__color-primary;
             
-            a { color: $color__header-color-primary;}
+            a { color: $color__color-primary;}
         }
      }
      
      .header-right{
-        background: $color__header-background-secondary;
-        flex: 1 0 30vw;
+        background: $color__background-secondary;
+        flex: 1 0 $width__background-secondary;
         
         h1.site-title, p.site-title {
-            color: $color__header-color-secondary;
+            color: $color__color-secondary;
             position: relative;
-            left: -70vw;
+            left: -$width__background-primary;
             
-            a { color: $color__header-color-secondary ;}
+            a { color: $color__color-secondary ;}
         }
         
      }

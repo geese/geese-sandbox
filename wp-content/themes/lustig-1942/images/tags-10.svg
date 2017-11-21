@@ -1,0 +1,24 @@
+<svg 
+	id="tags-icon" 
+	data-name="Layer 1" 
+	xmlns="http://www.w3.org/2000/svg" 
+	viewBox="0 0 14 14">
+
+	<defs>
+		<style>.cls-1{fill:none;}.cls-2{fill:#3b4871;}.cls-3{fill:#f0f;}.cls-4{fill:#141212;}.cls-5{fill:#fff;}</style>
+	</defs>
+
+	<title>tags-10</title>
+
+	<polygon class="cls-1" points="7.88 0.04 7.89 0.03 7.88 0.03 7.88 0.04"/>
+		<path class="cls-2" d="M8.89,0,7.75,0l2,2V14h1.13V2Zm0,0h0Z"/>
+		<path class="cls-2" d="M6.75,0h-4l-2,2V14h8V2Zm-4,0h0Zm4,0h0Z"/>
+	<polygon class="cls-3" points="8.75 0.03 8.75 0 7.88 0 6.75 0 7.89 0.02 8.75 0.03"/>
+
+	<polygon class="cls-3" points="0.75 0.03 2.75 0 0.75 0 0.75 0.03"/>
+	<polygon class="cls-4" points="2.75 0.03 2.74 0.03 2.75 0.04 2.75 0.03"/>
+	<polygon class="cls-4" points="6.75 0.04 6.76 0.03 6.75 0.03 6.75 0.04"/>
+
+	<circle class="cls-5" cx="4.75" cy="2.03" r="0.66"/>
+
+</svg>

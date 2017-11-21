@@ -10,6 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
 	<header class="entry-header">
             <div class="entry-header--decoration"></div>
 		<?php
@@ -26,6 +27,10 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
+        
+        <div class="entry-footer">
+		<?php lustig_1942_entry_footer(); ?>
+	</div><!-- .entry-footer -->
 
 	<div class="entry-content">
 		<?php

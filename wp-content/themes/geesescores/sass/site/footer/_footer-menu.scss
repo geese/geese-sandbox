@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 6, 2017, 1:31:59 PM
+    Author     : giselachodos
+*/
+
+
+/*
+Copied from .site-header in header.scss
+*/
+.site-footer { 
+	position: relative;
+	padding: 1em;
+	font-family: $font__sans;
+	color: #fff;
+	background-color: $color__skin;
+        text-align: center;
+	
+	@media screen and (min-width: $query__small) {
+		padding: 1em 2em;
+	}
+}
+
+nav.social-menu {
+    ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        //background: $color__skin;
+    }
+    
+    
+    li{
+/*        display: inline-block;
+        margin-right: 1em;*/
+
+        a{
+            display: block;
+            padding:  .5em 1em;
+            text-decoration: none;
+            color: #fff;
+            font-size: .9em;
+            
+            &:hover, &:focus, &:active{
+                text-decoration: underline;
+            }
+        }  
+    }
+}
+

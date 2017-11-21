@@ -27,3 +27,7 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin background-lines(){
+    background-image:   url("data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCA0Ij48ZGVmcz48c3R5bGU+LmNscy0xe29wYWNpdHk6MDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmJsYWNrLWxpbmU8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMCIgaGVpZ2h0PSIxIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB5PSIxIiB3aWR0aD0iMTAiIGhlaWdodD0iMyIvPjwvc3ZnPg==");
+}

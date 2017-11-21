@@ -1,0 +1,46 @@
+.footer--background-wrapper {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    
+    div:first-of-type {
+        background: $color__background-primary;
+        flex: 1 0 calc(#{$width__background-primary} - #{$width__background-overlap});
+        
+        div {
+            display: inline-block;
+            padding-left: 5vw;
+        }
+        
+        div, a {
+            color: black;
+            font-weight: bold;
+        }
+        
+        a {
+            text-decoration: none;
+            
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    div:nth-of-type(2){
+        background: #000000;
+        flex: 1 0 $width__background-overlap;
+    }
+    
+    div:nth-of-type(3){
+        height: 30vh;
+        flex: 1 0 $width__background-secondary;
+        background: $color__color-secondary;
+        color: $color__color-primary;
+        
+        a {
+            color: $color__color-primary;
+        }
+    }
+    
+    
+}

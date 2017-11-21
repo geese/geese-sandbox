@@ -51,15 +51,68 @@ if ( ! function_exists( 'lustig_1942_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'lustig-1942' ) );
 			if ( $categories_list ) {
+                                print('<span class="cat-icon">'
+                                        .'<svg  
+                                                style="display:block"
+                                                width="25"
+                                                id="categories-icon" 
+                                                data-name="Layer 1" 
+                                                xmlns="http://www.w3.org/2000/svg" 
+                                                viewBox="0 0 14.15 14.06">
+
+                                                <defs>
+                                                        <style>.cls-1{fill:#231e21;}</style>
+                                                </defs>
+
+                                                <title>categories-2</title>
+
+                                                <rect class="cls-1" width="4" height="4"/>
+                                                <rect class="cls-1" x="5.07" width="4" height="4"/>
+                                                <rect class="cls-1" y="5.02" width="4" height="4"/>
+                                                <rect class="cls-1" x="5.07" y="5.02" width="4" height="4"/>
+                                                <rect class="cls-1" x="10.13" y="5.02" width="4" height="4"/>
+                                                <rect class="cls-1" y="10.04" width="4" height="4"/>
+                                                <rect class="cls-1" x="5.07" y="10.04" width="4" height="4"/>
+                                                <rect class="cls-1" x="10.13" y="10.04" width="4" height="4"/>
+
+                                        </svg>' 
+                                        .'</span>');
+                            
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'lustig-1942' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf(  '<span class="cat-links">'
+//                                        .'<span class="cat-icon">'
+//                                        .'<svg 
+//                                                id="categories-icon" 
+//                                                data-name="Layer 1" 
+//                                                xmlns="http://www.w3.org/2000/svg" 
+//                                                viewBox="0 0 14.15 14.06">
+//
+//                                                <defs>
+//                                                        <style>.cls-1{fill:#231e21;}</style>
+//                                                </defs>
+//
+//                                                <title>categories-2</title>
+//
+//                                                <rect class="cls-1" width="4" height="4"/>
+//                                                <rect class="cls-1" x="5.07" width="4" height="4"/>
+//                                                <rect class="cls-1" y="5.02" width="4" height="4"/>
+//                                                <rect class="cls-1" x="5.07" y="5.02" width="4" height="4"/>
+//                                                <rect class="cls-1" x="10.13" y="5.02" width="4" height="4"/>
+//                                                <rect class="cls-1" y="10.04" width="4" height="4"/>
+//                                                <rect class="cls-1" x="5.07" y="10.04" width="4" height="4"/>
+//                                                <rect class="cls-1" x="10.13" y="10.04" width="4" height="4"/>
+//
+//                                        </svg>' 
+//                                        . '</span>'
+                                        . esc_html__( '%1$s', 'lustig-1942' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'lustig-1942' ) );
 			if ( $tags_list ) {
+                                print('<span class="tags-icon"></span>');
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'lustig-1942' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( '%1$s', 'lustig-1942' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 
